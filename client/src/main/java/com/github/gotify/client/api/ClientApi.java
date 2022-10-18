@@ -24,7 +24,8 @@ public interface ClientApi {
    * @return Call&lt;Client&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @POST("client")
   Call<Client> createClient(
@@ -38,7 +39,8 @@ public interface ClientApi {
    * @return Call&lt;Void&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @DELETE("client/{id}")
   Call<Void> deleteClient(
@@ -51,7 +53,8 @@ public interface ClientApi {
    * @return Call&lt;List&lt;Client&gt;&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("client")
   Call<List<Client>> getClients();
