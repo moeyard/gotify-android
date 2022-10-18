@@ -25,7 +25,8 @@ public interface ApplicationApi {
    * @return Call&lt;Application&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @POST("application")
   Call<Application> createApp(
@@ -39,7 +40,8 @@ public interface ApplicationApi {
    * @return Call&lt;Void&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @DELETE("application/{id}")
   Call<Void> deleteApp(
@@ -52,7 +54,8 @@ public interface ApplicationApi {
    * @return Call&lt;List&lt;Application&gt;&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("application")
   Call<List<Application>> getApps();
