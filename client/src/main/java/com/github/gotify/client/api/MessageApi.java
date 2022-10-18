@@ -25,7 +25,8 @@ public interface MessageApi {
    * @return Call&lt;Message&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @POST("message")
   Call<Message> createMessage(
@@ -39,7 +40,8 @@ public interface MessageApi {
    * @return Call&lt;Void&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @DELETE("application/{id}/message")
   Call<Void> deleteAppMessages(
@@ -53,7 +55,8 @@ public interface MessageApi {
    * @return Call&lt;Void&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @DELETE("message/{id}")
   Call<Void> deleteMessage(
@@ -66,7 +69,8 @@ public interface MessageApi {
    * @return Call&lt;Void&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @DELETE("message")
   Call<Void> deleteMessages();
@@ -81,7 +85,8 @@ public interface MessageApi {
    * @return Call&lt;PagedMessages&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("application/{id}/message")
   Call<PagedMessages> getAppMessages(
@@ -96,7 +101,8 @@ public interface MessageApi {
    * @return Call&lt;PagedMessages&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("message")
   Call<PagedMessages> getMessages(
@@ -109,7 +115,8 @@ public interface MessageApi {
    * @return Call&lt;Message&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("stream")
   Call<Message> streamMessages();
