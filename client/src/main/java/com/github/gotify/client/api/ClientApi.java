@@ -65,7 +65,8 @@ public interface ClientApi {
    * @return Call&lt;Client&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @PUT("client/{id}")
   Call<Client> updateClient(
