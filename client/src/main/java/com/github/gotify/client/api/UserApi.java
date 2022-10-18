@@ -26,7 +26,8 @@ public interface UserApi {
    * @return Call&lt;User&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @POST("user")
   Call<User> createUser(
@@ -39,7 +40,8 @@ public interface UserApi {
    * @return Call&lt;User&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("current/user")
   Call<User> currentUser();
@@ -52,7 +54,8 @@ public interface UserApi {
    * @return Call&lt;Void&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @DELETE("user/{id}")
   Call<Void> deleteUser(
@@ -66,7 +69,8 @@ public interface UserApi {
    * @return Call&lt;User&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("user/{id}")
   Call<User> getUser(
@@ -79,7 +83,8 @@ public interface UserApi {
    * @return Call&lt;List&lt;User&gt;&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("user")
   Call<List<User>> getUsers();
@@ -92,7 +97,8 @@ public interface UserApi {
    * @return Call&lt;Void&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @POST("current/user/password")
   Call<Void> updateCurrentUser(
@@ -107,7 +113,8 @@ public interface UserApi {
    * @return Call&lt;User&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @POST("user/{id}")
   Call<User> updateUser(
