@@ -24,7 +24,8 @@ public interface PluginApi {
    * @return Call&lt;Void&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @POST("plugin/{id}/disable")
   Call<Void> disablePlugin(
@@ -38,7 +39,8 @@ public interface PluginApi {
    * @return Call&lt;Void&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @POST("plugin/{id}/enable")
   Call<Void> enablePlugin(
@@ -52,7 +54,8 @@ public interface PluginApi {
    * @return Call&lt;Object&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("plugin/{id}/config")
   Call<Object> getPluginConfig(
@@ -66,7 +69,8 @@ public interface PluginApi {
    * @return Call&lt;String&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("plugin/{id}/display")
   Call<String> getPluginDisplay(
@@ -79,7 +83,8 @@ public interface PluginApi {
    * @return Call&lt;List&lt;PluginConf&gt;&gt;
    */
   @Headers({
-    "Content-Type:application/json"
+    "Content-Type:application/json",
+    "User-Agent:Gotify/1.0"
   })
   @GET("plugin")
   Call<List<PluginConf>> getPlugins();
@@ -92,7 +97,8 @@ public interface PluginApi {
    * @return Call&lt;Void&gt;
    */
   @Headers({
-    "Content-Type:application/x-yaml"
+    "Content-Type:application/x-yaml",
+    "User-Agent:Gotify/1.0"
   })
   @POST("plugin/{id}/config")
   Call<Void> updatePluginConfig(
